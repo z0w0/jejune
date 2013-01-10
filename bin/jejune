@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+var jejune = require(".."),
+    pkg = require("../package.json"),
+    program = require("commander");
+
+program
+    .version(pkg.version)
+    .usage("[options] [generators..]");
+
+program.on("--help", function() {
+    console.log("  Examples:");
+    console.log("");
+    console.log("    $ jejune christian");
+    console.log("    $ jejune");
+    console.log("");
+});
+
+program.parse(process.argv);
+
+if(program.args.length > 0) {
+    var names = jejune(program.args);
+
+    for(var i = 0; i < names.length; i++) console.log(names[i]);
+}
+else console.log(jejune());

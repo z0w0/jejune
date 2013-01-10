@@ -1,0 +1,25 @@
+{
+    "name": "jejune",
+    "description": "Generating stereotypical usernames has never been easier",
+    "tags": ["user", "boilerplate", "generic", "generate"],
+    "version": "0.1.0",
+    "author": "Zack Corr <zack@z0w0.me>",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/z0w0/jejune.git"
+    },
+    "bugs": {
+        "url": "http://github.com/z0w0/jejune/issues"
+    },
+    "main": "./lib/main",
+    "bin": {
+        "jejune": "bin/jejune"
+    },
+    "dependencies": {
+        "underscore": "1.4.x",
+        "commander": "1.1.x"
+    },
+    "engines": {
+        "node": ">= 0.6.x"
+    }
+}
