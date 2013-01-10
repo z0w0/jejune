@@ -2,7 +2,7 @@
     "name": "jejune",
     "description": "Generating stereotypical usernames has never been easier",
     "tags": ["user", "boilerplate", "generic", "generate"],
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "Zack Corr <zack@z0w0.me>",
     "license": "MIT",
     "repository": {

@@ -65,7 +65,40 @@ The default generators are stored in the `generators` directory in Jejune's sour
 System-wide ones are stored in `/etc/jejune/generators` (none on Windows) and user-wide ones
 are in `~/.jejune/generators` (`%USERPROFILE%\jejune\generators` on Windows).
 
+The simplest of generators `petlover` which could be placed in `/etc/jejune/generators/petlover.json`:
+
+```json
+{
+    "parts": {
+        "cats": ["rule"],
+        "dogs": ["rule"]
+        "rule": []
+    },
+    "wings": [
+        ["xX", "Xx"]
+    ],
+    "numbers": {
+        "births": [1980, 2005],
+        "ranges": [[0, 125]],
+        "voodoo": [1, 3, 10]
+    }
+}
+```
+
+The `parts` section is where the magic is -- a random starting word is chosen from all the words
+defined here. Each word has its own array of words that can logically come after it,
+e.g. the example shows that the word rule can come after both cats and dogs. This would generate
+`catsrule` or `dogsrule`. The `wings` section defines the prefix and suffix pairs that may be selected.
+The `numbers` section will usually generate a number in the range of the `births` values,
+so it would generate a year between 1980 and 2005 and then get the last 2 characters in the year, e.g.
+`1994` would be `94`. There's also a chance that numbers will be randomly chosen from the `ranges` value though.
+If the resulting number is inside of the `voodoo` array, a new number will be generated.
+
+Take a look at `christian.json` in the `generators` directory for a more solid example of a generator.
+
 ## API
+..
+
 
 ### jejune([generators..])
 
