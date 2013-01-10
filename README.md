@@ -43,7 +43,7 @@ Heaven881
 ## Configuration
 
 Jejune supports configuring general settings in a JSON file. It will be
-loaded from `/etc/jejune/conf.json` or `~/.jejune/conf.json` (`%USERPROFILE`\jejune\conf.json` on Windows).
+loaded from `/etc/jejune/conf.json` or `~/.jejune/conf.json` (`%USERPROFILE\jejune\conf.json` on Windows).
 
 An example configuration file with default settings:
 
@@ -81,7 +81,7 @@ var jejune = require("jejune");
 var christian = jejune("christian"); // generates just a christian username
 var some = jejune(["christian", "teenager", "gamer", "mlp"]); // generates an array of usernames in that order
 
-console.log(jejune()); // random username
+console.log(jejune()); // username from random generator
 ```
 
 N.B. Not all generators listed in the example are implemented yet.

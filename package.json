@@ -4,6 +4,7 @@
     "tags": ["user", "boilerplate", "generic", "generate"],
     "version": "0.1.0",
     "author": "Zack Corr <zack@z0w0.me>",
+    "license": "MIT",
     "repository": {
         "type": "git",
         "url": "http://github.com/z0w0/jejune.git"
